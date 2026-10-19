@@ -7,7 +7,7 @@ Everything is in **`rag_rerank.ipynb`** (one short notebook, executed outputs in
 - **Chunking:** one chunk per numbered rule item (583 chunks)
 - **Pipeline 1:** `Qwen/Qwen3-Embedding-4B` top-10 by cosine → top-3 → LLM
 - **Pipeline 2:** same top-10 → `BAAI/bge-reranker-v2-m3` → top-3 → LLM
-- **LLM:** `Qwen/Qwen3.8-27B` served locally with vLLM, temperature 0, in non-thinking and thinking mode
+- **LLM:** `Qwen/Qwen3.8-27B` served locally with vLLM, temperature 0, in  thinking mode
 - **Test set:** 20 questions with a gold item id and gold answer
 
 ## Outputs (`results/`)
