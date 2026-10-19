@@ -1,0 +1,5 @@
+,Pipeline 1,Pipeline 2
+bi-encoder retrieve,78.2,78.2
+cross-encoder rerank,0.0,43.6
+LLM non-thinking,633.4,742.7
+LLM thinking,5772.7,5272.6

@@ -1,0 +1,10 @@
+torch>=2.4
+sentence-transformers>=5.1
+transformers>=4.56
+pypdf>=5.0
+cryptography>=3.1
+fonttools
+openai>=1.40
+pandas
+numpy
+jupyter
