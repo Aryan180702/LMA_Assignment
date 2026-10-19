@@ -10,19 +10,6 @@ Everything is in **`rag_rerank.ipynb`** (one short notebook, executed outputs in
 - **LLM:** `Qwen/Qwen3.8-27B` served locally with vLLM, temperature 0, in non-thinking and thinking mode
 - **Test set:** 20 questions with a gold item id and gold answer
 
-## Run
-
-```bash
-pip install -r requirements.txt
-
-# LLM server (vLLM 0.30 docker; 8 GPUs = 4 data-parallel x 2 tensor-parallel)
-docker run -d --gpus all --ipc=host --network host -v <hf_model_dir>:/hf/q38:ro vllm/vllm-openai:v0.30.0 \
-  /hf/q38/snapshots/<hash> --served-model-name qwen --tensor-parallel-size 2 --data-parallel-size 4 \
-  --port 8011 --max-model-len 16384 --reasoning-parser qwen3
-
-LLM_URL=http://<server>:8011/v1 jupyter nbconvert --to notebook --execute --inplace rag_rerank.ipynb
-```
-
 ## Outputs (`results/`)
 
 | file | content |
